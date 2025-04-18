@@ -1,5 +1,5 @@
 template<typename T>
-class Vectore {
+class Vector {
     private:
         T* data;
         size_t capacity;
