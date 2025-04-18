@@ -3,12 +3,10 @@ using std::cout;
 
 class vector {
     public:
-        vector(char * values) {
+        vector(int values) {
             
         }
         ~vector(){
-        }
-        T& operator[](size_t index) {
         }
 };
 
@@ -19,6 +17,5 @@ class vector {
 
 int main() {
     vector vec(13);
-    vec[13];
     return 0;
 }
