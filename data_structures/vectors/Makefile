@@ -1,13 +1,13 @@
 
 CC=gcc
 CXX=g++
-RM=rm -f
+RM=rm 
 CFLAGS=-I$(IDIR)
 SRCS=vectors.cpp 
 
 .SILENT:compile run clean
 
-all: compile run clean
+all: compile run
 
 compile:
 	$(CXX) -o vectors $(SRCS)
