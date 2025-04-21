@@ -25,7 +25,7 @@ class binary_search_tree {
         ~binary_search_tree(){
 
         }
-        insert(int key, T data){
+        /*insert(int key, T data){
             node<T>* new_node = new node<T>(key, data);
             node<T>* pointer = head;
             if(pointer->left==NULL && pointer->right==NULL){
@@ -33,11 +33,11 @@ class binary_search_tree {
             }
 
         }
-
+*/
 
 };
 
 int main() {
-    binary_search_tree<int> bst(1);
+    binary_search_tree<int> bst(1,1);
     return 0;
 }
