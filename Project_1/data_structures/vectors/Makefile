@@ -3,14 +3,14 @@ CC=gcc
 CXX=g++
 RM=rm 
 CFLAGS=-I$(IDIR)
-SRCS=vectors.cpp 
+SRCS=*.cpp 
 
 .SILENT:compile run clean
 
-all: compile run
+all: compile run clean
 
 compile:
-	$(CXX) -o vectors $(SRCS)
+	$(CXX) -std=c++11 -o linked_list $(SRCS)
 run:
 	./vectors
 clean:

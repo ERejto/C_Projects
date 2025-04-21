@@ -1,0 +1,206 @@
+C++ FPGA Software Engineer Roadmap
+
+This roadmap outlines a series of progressively challenging projects to help you become an expert in C++ programming with a focus on FPGA software engineering — particularly tailored for performance-driven environments like Hudson River Trading.
+
+Each project includes:
+
+    Objective
+
+    Suggested Reading
+
+    Core Tasks
+
+    Stretch Goals
+
+    Evaluation Criteria
+
+Project 1: C++ Core Data Structures & Algorithms
+
+    Objective: Develop a deep understanding of C++ syntax, templates, and STL by recreating core data structures and implementing fundamental algorithms.
+
+    Suggested Reading:
+
+    "Accelerated C++" by Koenig & Moo
+
+    LearnCpp.com
+
+    Core Tasks:
+
+    Implement your own versions of:
+
+    Vector
+
+    Linked List
+
+    Hash Map (with chaining)
+
+    Binary Search Tree
+
+    Implement and benchmark:
+
+    QuickSort
+
+    Binary Search
+
+    Stretch Goals:
+
+    Implement generic (templated) versions of the data structures
+
+    Add iterator support
+
+    Compare performance with STL versions
+
+    Evaluation:
+
+    Correctness and efficiency
+
+    Use of modern C++ (C++17/20), including smart pointers and RAII
+
+    Code organization and documentation
+
+Project 2: Manual Memory Management & Smart Pointers
+
+    Objective: Build manual memory allocators and smart pointers to understand memory control and safety in C++.
+    
+    Suggested Reading:
+    
+    "C++ Concurrency in Action" by Anthony Williams
+    
+    Valgrind + gdb tutorials
+    
+    Core Tasks:
+    
+    Create a fixed-block memory pool allocator
+    
+    Implement reference-counted and move-only smart pointers
+    
+    Stretch Goals:
+    
+    Make allocator thread-safe
+    
+    Evaluation:
+    
+    Memory safety, performance benchmarks, code style
+    
+    Project 3: Lock-Free Queue for Real-Time Systems
+    
+    Objective: Implement a lock-free MPMC queue using atomic operations to explore real-time concurrency.
+    
+    Suggested Reading:
+    
+    Herb Sutter: "Writing Lock-Free Code"
+    
+    C++ memory model & std::atomic
+    
+    Core Tasks:
+    
+    Lock-free MPMC queue
+    
+    Benchmark against mutex-based alternative
+    
+    Stretch Goals:
+    
+    Explore wait-free variants
+    
+    Evaluation:
+    
+    Concurrency safety, latency, throughput
+    
+Project 4: HDL + C++: Blinking LED with FPGA
+
+    Objective: Build a simple Verilog project and interface it with C++ through simulation or an embedded platform.
+
+    Suggested Reading:
+
+    "FPGA Prototyping by Verilog Examples" by Pong Chu
+
+    Vivado HLS / Quartus HLS basics
+
+    Core Tasks:
+
+    Verilog module for blinking LED
+
+    C++ interface via MMIO or simulation
+
+    Stretch Goals:
+
+    Add button input or PWM output
+
+    Evaluation:
+
+    Synthesizable Verilog, integration with C++, functional correctness
+
+Project 5: Market Data Feed Parser
+
+    Objective: Build a fast, low-latency parser in C++ for binary market data formats like NASDAQ ITCH.
+
+    Suggested Reading:
+
+    ITCH protocol documentation
+
+    TCP sockets & Wireshark basics
+
+    Core Tasks:
+
+    Parse binary packet stream into structured data
+
+    Benchmark throughput and packet loss
+
+    Stretch Goals:
+
+    Zero-copy decoding, memory pools
+
+    Evaluation:
+
+    Latency, throughput, accuracy
+
+Project 6: FPGA-Accelerated Order Book Matching Engine
+
+    Objective: Implement a software order book in C++, offloading matching logic to an FPGA using HLS.
+
+    Suggested Reading:
+
+    Matching engine design papers
+
+    Vivado or Quartus HLS tools
+
+    Core Tasks:
+
+    Implement limit order book (add/cancel/match)
+
+    Design HLS logic for order matching
+
+    Stretch Goals:
+
+    Add risk checks, latency control knobs
+
+    Evaluation:
+
+    Matching performance, HLS synthesis quality, C++/Verilog integration
+
+Project 7: Capstone — Ultra Low Latency Trading Simulation
+
+    Objective: Combine your feed handler, order book, and FPGA module into a mock trading system optimized for ultra-low latency.
+    
+    Suggested Reading:
+    
+    "Designing Data-Intensive Applications" by Martin Kleppmann
+    
+    Optional: Intel DPDK / Solarflare Onload for kernel bypass networking
+    
+    Core Tasks:
+    
+    Build integrated trading simulation stack
+    
+    Add timestamping and performance logging
+    
+    Stretch Goals:
+    
+    Multi-core architecture, TCP/UDP packet crafting
+    
+    Evaluation:
+    
+    End-to-end latency, modularity, code quality
+    
+    Let me know once you've implemented the starter vector so I can help review or guide the next step!
+
