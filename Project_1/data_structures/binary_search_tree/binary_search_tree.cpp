@@ -28,24 +28,31 @@ class binary_search_tree {
         void insert(int key, T data){
             node<T>* new_node = new node<T>(key, data);
             node<T>* pointer = head;
-            while(pointer->left != NULL && pointer->right != NULL){
+            while(pointer != nullptr){
                 if(pointer->key > new_node->key){
-                    pointer = pointer->left;
+                    if(pointer->left != nullptr){
+                        pointer = pointer->left;
+                    }
+                    else {
+                        pointer->left = new_node;
+                    }
                 }
                 else if(pointer->key < new_node->key){
-                    pointer = pointer->right;
+                    if(pointer->right != nullptr){
+                        pointer = pointer->right;
+                    }
+                    else {
+                        pointer->right = new_node;
+                    }
                 }
-            }
-            if(pointer->key > new_node->key){
-                pointer->left = new_node;
-            }
-            if(pointer->key < new_node->key){
-                pointer->right = new_node;
+                else{
+                    pointer = nullptr;
+                }
             }
         }
         T get(int key){
             node<T>* pointer = head;
-            while(pointer != NULL){
+            while(pointer != nullptr){
                 if(pointer->key > key){
                     pointer = pointer->left;
                 }
@@ -85,14 +92,14 @@ class binary_search_tree {
 };
 
 int main() {
-    binary_search_tree<float> bst(4,1.2);
-    bst.insert(6,4.555);
-    bst.insert(2,3.3333);
-    bst.insert(1,4.56666);
-    bst.insert(8,1.222);
+    binary_search_tree<char> bst(4,'r');
+    bst.insert(6,'r');
+    bst.insert(2,'a');
+    bst.insert(1,'d');
+    bst.insert(8,'g');
 
-    bst.insert(7,4.44444);
-    bst.insert(1,4.4444);
+    bst.insert(7,'i');
+    bst.insert(1,'k');
     bst.print();
     cout << bst.get(8) << "\n";
     return 0;
