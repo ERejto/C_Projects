@@ -51,6 +51,7 @@ int main() {
     timer time;
     while (1) {
         cout << time.sec() << "\n";
+
         sleep_for(1s);
         cout << time.milli() << "\n";
         sleep_for(1ms);
